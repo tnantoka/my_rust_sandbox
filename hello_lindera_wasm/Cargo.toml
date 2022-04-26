@@ -1,0 +1,13 @@
+[package]
+name = "hello_lindera_wasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+lindera = { version = "0.13", features = ["ipadic"] }
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
