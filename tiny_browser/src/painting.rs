@@ -1,5 +1,6 @@
 use crate::css::{Color, Value};
 use crate::layout::{BoxType, LayoutBox, Rect};
+use serde::Serialize;
 
 type DisplayList = Vec<DisplayCommand>;
 
@@ -92,6 +93,7 @@ fn render_borders(list: &mut DisplayList, layout_box: &LayoutBox) {
     ));
 }
 
+#[derive(Serialize)]
 pub struct Canvas {
     pub pixels: Vec<Color>,
     pub width: usize,

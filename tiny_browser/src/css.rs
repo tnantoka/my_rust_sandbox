@@ -1,3 +1,4 @@
+use serde::Serialize;
 use std::cmp::Reverse;
 
 pub struct Stylesheet {
@@ -57,7 +58,7 @@ pub enum Unit {
     Px,
 }
 
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq, Serialize)]
 pub struct Color {
     pub r: u8,
     pub g: u8,

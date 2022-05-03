@@ -1,0 +1,12 @@
+{
+  "name": "tiny_browser",
+  "version": "0.1.0",
+  "files": [
+    "tiny_browser_bg.wasm",
+    "tiny_browser.js",
+    "tiny_browser.d.ts"
+  ],
+  "module": "tiny_browser.js",
+  "types": "tiny_browser.d.ts",
+  "sideEffects": false
+}
