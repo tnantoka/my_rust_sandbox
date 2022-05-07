@@ -28,6 +28,7 @@ fn main() {
     print!("{}{}", text.join(" "), ending);
 }
 
+#[cfg(test)]
 mod tests {
     use assert_cmd::Command;
     #[allow(unused_imports)]
@@ -48,7 +49,6 @@ mod tests {
         runs(&["hello", "-n"], "hello");
     }
 
-    #[allow(dead_code)]
     fn runs(args: &[&str], expected: &'static str) {
         Command::cargo_bin("echo")
             .unwrap()
